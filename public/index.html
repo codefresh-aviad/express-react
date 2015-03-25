@@ -16,7 +16,7 @@
 	        <div class="logo"></div>
 	        <div class="logo react"></div>
 	
-	        <h1>Express React Example</h1>
+	        <h1>Express React Wall Example</h1>
 	    </div>
 	</header>
 	<section>
@@ -38,9 +38,9 @@
 		    var rawMarkup = converter.makeHtml(this.props.children.toString());
 		    return (
 		      <div className="comment">
-		        <h2 className="commentAuthor">
-		          {this.props.author}
-		        </h2>
+		        <h4 className="commentAuthor">
+		          {this.props.author}:
+		        </h4>
 		        <span dangerouslySetInnerHTML={{__html: rawMarkup}} />
 		      </div>
 		    );
@@ -130,9 +130,8 @@
 		  render: function() {
 		    return (
 		      <div className="commentBox">
-		        <h1>Comments</h1>
-		        <CommentList data={this.state.data} />
 		        <CommentForm onCommentSubmit={this.handleCommentSubmit} />
+		        <CommentList data={this.state.data} />
 		      </div>
 		    );
 		  }

@@ -13,6 +13,10 @@ h1,h2,h3,h4,h5 {
     font-family: 'Podkova';
 }
 
+p {
+	margin:0;
+}
+
 codefresh-logo-l.png
 
 .dark_bg {
@@ -50,7 +54,7 @@ a:hover {
 
 header {
     padding:20px 0px;
-    height:300px;
+    height:120px;
 }
 
 .logo {
@@ -75,4 +79,20 @@ section {
 
 footer {
     padding:30px 0px;
+}
+
+.comment {
+	line-height:30px;
+	margin-bottom:20px;
+}
+
+.comment h4 {
+	height:30px;
+	line-height:30px;
+	text-decoration:underline;
+	float:left;
+	margin:0;
+	padding:0;
+	margin-right:5px;
+	
 }
