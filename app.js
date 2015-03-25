@@ -1,12 +1,17 @@
 var express = require('express'),
 	app 	= express(),
 	server 	= require('http').createServer(app),
+	bodyParser = require('body-parser'),
 	path 	= require('path');
 // set default server port
 var port = process.env.PORT || 9000;
 
 app.set('view engine', 'html');
-// set client index url (view)
+
+app.use(express.urlencoded());
+
+app.use('/api/comments', require('./api/comments'));
+
 app.get('/', function(req, res){
     res.sendFile(__dirname + '/public/index.html');
 });
