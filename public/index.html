@@ -1,0 +1,72 @@
+<!-- index.html -->
+<html>
+  <head>
+    <title>Hello React</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css">
+    
+    <script src="https://fb.me/react-0.13.1.js"></script>
+    <script src="https://fb.me/JSXTransformer-0.13.1.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.0.min.js"></script>
+  </head>
+  <body>
+  	<header class="dark_bg">
+	    <div class="container">
+	        <div class="logo"></div>
+	        <div class="logo react"></div>
+	
+	        <h1>Express React Example</h1>
+	    </div>
+	</header>
+	<section>
+	    <div class="container">
+			<div id="content"></div>
+	    </div>
+	</section>
+	<footer>
+	    <div class="container">
+			&copy; Codefresh 2015
+	    </div>
+	</footer>
+    
+    <script type="text/jsx">
+    
+      	var SimpleBox = React.createClass({
+		  render: function() {
+		    return (
+		      <div className="SimpleBox">
+		        Hello, I'm just a simple box
+		      </div>
+		    );
+		  }
+		});
+		
+		var CommentForm = React.createClass({
+		  render: function() {
+		    return (
+		      <div className="commentForm">
+		        Hello, world! I am a CommentForm.
+		      </div>
+		    );
+		  }
+		});
+      
+		var ComponentWrap = React.createClass({
+		  render: function() {
+		    return (
+		      <div className="ComponentWrap">
+		        <h1>React components example:</h1>
+		        <SimpleBox />
+		        <CommentForm />
+		      </div>
+		    );
+		  }
+		});
+		
+		React.render(
+		  <ComponentWrap />,
+		  document.getElementById('content')
+		);
+    </script>
+  </body>
+</html>
